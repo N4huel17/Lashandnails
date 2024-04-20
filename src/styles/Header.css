@@ -1,0 +1,216 @@
+@import url('https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swaP');
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Josefin+Sans:ital,wght@0,300;1,200&family=Poppins:wght@300;400;600;700&family=Roboto:ital,wght@0,300;0,400;0,500;1,400&display=swap');
+
+* .body-header {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+   }
+.logo-header p {
+    display: flex;
+    justify-content: center;
+    color: white;
+    font-weight: bold;
+    font-size: 30px;
+    font-family: "Dancing Script", cursive;
+    margin-bottom: 20px;
+}
+   .cont-header{
+    background-color:black;
+    width: 100%;
+    height: 100px ;
+   }
+
+   .menu{
+    display: flex;
+    color: white;
+    position: absolute;
+    left: 10px;
+    margin-bottom: 20px;
+   }
+   
+.menu:hover .ul-categorias {
+    display: block;
+    }
+   
+    .ul-categorias {
+        display: none;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        background-color: #ffffff; 
+        padding: 10px;
+        border-radius: 5px;
+        list-style: none; 
+        
+        }
+        .categorias2{
+            display: none;
+        }
+        
+        .ul-categorias li a  {
+            text-decoration: none;
+            list-style-type: none;
+           color: rgb(0, 0, 0); 
+           font-size: 12px;
+           
+           list-style: none; 
+          margin-bottom: 5px; 
+        }
+        .ul-categorias li a:hover {
+            color: rgb(255, 0, 162); 
+        }
+   .buscadorH{
+    display: none;
+   }
+   .search-container:hover .buscadorH {
+    display: inline-block;
+}
+  
+   .element{
+    color: white;
+    display: flex;
+    position: absolute;
+    right: 10px;
+    margin-bottom: 20px;
+    gap: 15px;
+    
+   }
+ #iconBuscar{
+    color: white;
+    background: none; 
+    border: none;
+ }
+ #iconTurnos{
+    color: white;
+    background: none; 
+    border: none;
+    font-size: 15px;
+ }
+
+
+@media(min-width:765px){
+.menu{
+    display: none;
+}
+.logo-header p {
+    
+    font-size: 50px;
+   justify-content: flex-start;
+   margin-left: 20px;
+}
+
+.search-bar {
+    position: relative;
+    display: flex; /* Cambiamos a display: flex para que los elementos se alineen horizontalmente */
+    align-items: center; /* Centramos verticalmente los elementos */
+    margin-left: 20px; /* Agregamos un margen a la izquierda para separarlos del logo */
+}
+
+.buscadorH {
+    display: inline-block; /* Mostramos el campo de búsqueda */
+    width: 200px; /* Ajustamos el ancho del campo de búsqueda según sea necesario */
+    margin-right: 10px; /* Agregamos un margen a la derecha para separarlo del icono */
+}
+
+#iconBuscar {
+    color: white;
+    background: none;
+    border: none;
+    
+}
+.element{
+  
+    position: absolute;
+    right: 20px;
+    top: 20px;
+    gap: 15px;
+    
+   }
+   .categorias2{
+    display: flex; 
+
+    text-decoration: none;
+    position: absolute;
+    right: 100px;
+
+    
+   }
+   .categorias2 a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+    font-size: 18px;
+    margin-left: 20px;
+  
+   }
+   .ul-categorias2 {
+    display: flex; /* Cambiar a display: flex para que los elementos se alineen horizontalmente */
+    list-style: none; /* Eliminar los marcadores de lista */
+    padding: 0; /* Eliminar el relleno predeterminado de la lista */
+   
+    text-decoration: none;
+}
+.ul-categorias2 li a:hover {
+    color: rgb(255, 0, 162); 
+    list-style: none; 
+}
+.oculto {
+    display: none;
+    text-decoration: none;
+    list-style: none; 
+
+}
+.oculto a {
+    text-decoration: none;
+    color: black;
+    list-style: none; 
+}
+
+#ver-mas:hover ~ .oculto {
+    display:block; 
+}
+.oculto li a:hover {
+    color: rgb(255, 0, 162); 
+    list-style: none; 
+}
+.oculto {
+    display: none;
+    position: absolute; 
+    right: 60px;
+    background-color: #ffffff; 
+    padding: 10px;
+    border-radius: 5px;
+
+    z-index: 1; /* Asegura que la lista oculta esté por encima de otros elementos */
+}
+.oculto:focus-within {
+    display: block;
+}
+
+.ul-categorias2:focus-within + .oculto {
+    display: block;
+}
+
+
+.cont-header{
+ 
+    height: 110px ;
+   }
+ 
+}
+
+@media(min-width:1024px){
+    .element{
+  
+        right: 180px;
+        top: 30px;
+        gap: 15px;
+        
+       }
+       .categorias2{
+
+        right: 300px;
+    
+        
+       }
+}

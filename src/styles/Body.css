@@ -1,0 +1,26 @@
+.home_main-portada {
+    width: 100%; /* Hace que el contenedor ocupe todo el ancho de la página */
+    overflow: hidden; /* Evita que la imagen se desborde del contenedor */
+  
+
+}
+
+.home_main-portada img {
+    width: 100%; /* Hace que la imagen ocupe todo el ancho del contenedor */
+    height: auto; /* Ajusta automáticamente la altura de la imagen según la proporción original */
+    display: block; /* Asegura que la imagen se muestre como un bloque para ocupar todo el ancho disponible */
+}
+
+
+.portada-titulo {
+    position: absolute; /* Establece la posición absoluta */
+    top: 25%; /* Lo sitúa en la mitad superior del contenedor */
+    left: 50%; /* Lo sitúa en el centro horizontal del contenedor */
+    transform: translate(-50%, -50%); /* Lo centra completamente */
+    color: rgba(255, 255, 255, 0.4); /* Color blanco medio transparente */
+    font-size: 3em; /* Tamaño de fuente */
+    text-align: center; /* Centra el texto horizontalmente */
+    padding: 10px 20px; /* Espaciado interno */
+    border-radius: 5px; /* Borde redondeado */
+    z-index: 1; /* Asegura que esté por encima de otros elementos */
+}
