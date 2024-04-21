@@ -31,6 +31,7 @@
    
 .menu:hover .ul-categorias {
     display: block;
+    z-index: 9999;
     }
    
     .ul-categorias {
@@ -38,7 +39,7 @@
         position: absolute;
         top: 100%;
         left: 0;
-        background-color: #ffffff; 
+        background-color: #bcbaba; 
         padding: 10px;
         border-radius: 5px;
         list-style: none; 
@@ -133,6 +134,7 @@
     text-decoration: none;
     position: absolute;
     right: 100px;
+    top: 80px;
 
     
    }
@@ -144,9 +146,9 @@
   
    }
    .ul-categorias2 {
-    display: flex; /* Cambiar a display: flex para que los elementos se alineen horizontalmente */
-    list-style: none; /* Eliminar los marcadores de lista */
-    padding: 0; /* Eliminar el relleno predeterminado de la lista */
+    display: flex; 
+    list-style: none; 
+    padding: 0; 
    
     text-decoration: none;
 }

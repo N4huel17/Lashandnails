@@ -24,3 +24,126 @@
     border-radius: 5px; /* Borde redondeado */
     z-index: 1; /* Asegura que esté por encima de otros elementos */
 }
+
+.card {
+    display: flex;
+    flex-wrap: wrap;
+  justify-content: center;
+    position: relative;
+    margin-bottom: 30px; /* Espacio entre las tarjetas */
+    overflow: hidden;
+    transition: transform 0.3s ease; /* Transición suave para la transformación */
+  overflow: hidden;
+  border-radius: 5px; /* Borde redondeado */
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra en el borde */
+  }
+  .card:hover {
+    transform: scale(1.05); /* Agrandar el cartelito al pasar el mouse */
+  }
+  .image-container {
+    position: relative;
+    width: 100%;
+    height: 200px; /* Altura deseada para las imágenes */
+    overflow: hidden;
+  }
+  
+  .image-container img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+  
+  .overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+    opacity: 0;
+    transition: opacity 0.3s ease;
+  }
+  .info{
+    position: absolute;
+    top:40%;
+    left: 40%;
+  }
+  .card:hover .overlay {
+    opacity: 1;
+  }
+  
+  .overlay p {
+    color: white;
+  }
+  
+  .overlay button {
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    width: 90px;
+    height: 30px ;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+    cursor: pointer;
+   
+  }
+  
+  
+  .button { 
+    position: absolute;
+    top: 75%;
+    left: 35%;
+    width: 90px;
+    height: 30px ;
+    border-radius: 5px;
+    background-color: rgb(0, 0, 0);
+    color: rgb(255, 255, 255);
+    border: none;
+    cursor: pointer;
+    margin-top: 10px;
+  }
+  .button:hover {
+    color: rgb(255, 0, 162); 
+  }
+  
+  .card h3 {
+    position: absolute;
+    top: 20%;
+    left: 50%;
+    font-size: 20px;
+    transform: translate(-50%, -50%);
+    color: white;
+    z-index: 1;
+    margin: 0;
+    padding: 0;
+  }
+  
+  
+  /* Estilos para pantallas pequeñas (menos de 768px de ancho) */
+  @media screen and (max-width: 767px) {
+    .cartelitos {
+      display: block; /* Apila las tarjetas verticalmente */
+    }
+  
+    .card {
+      width: calc(100% - 20px); /* Ocupa el ancho completo del contenedor, con un margen a cada lado */
+    }
+  }
+  
+  /* Estilos para pantallas medianas y grandes (768px o más de ancho) */
+  @media screen and (min-width: 768px) {
+    .cartelitos {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: space-between; /* Distribuye los elementos horizontalmente */
+    }
+  
+    .card {
+      max-width: 300px; /* Máximo ancho de 300px */
+      width: calc(33.33% - 20px); /* Calcula el ancho de cada tarjeta, teniendo en cuenta el margen entre ellas */
+    }
+  }
