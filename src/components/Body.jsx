@@ -11,7 +11,7 @@ export default function Body() {
   return (
     <div>
       <div className="home_main-portada">
-        <img src={portada} alt="" />
+        <img src={portada} alt=""/>
        
       </div>
 
