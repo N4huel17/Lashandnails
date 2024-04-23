@@ -48,7 +48,12 @@
         .categorias2{
             display: none;
         }
-        
+        .header-parrafo{
+            position: absolute;
+            top:-5px;
+            left: 18px;
+
+        }
         .ul-categorias li a  {
             text-decoration: none;
             list-style-type: none;

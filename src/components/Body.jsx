@@ -15,8 +15,6 @@ export default function Body() {
        
       </div>
 
-
-
       <section id="servicios">
         <div className="container">
 
@@ -33,6 +31,8 @@ export default function Body() {
         </div>
 
       </section>
+
+   
 
 
 
