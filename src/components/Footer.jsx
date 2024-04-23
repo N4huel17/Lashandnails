@@ -1,6 +1,5 @@
 import '../styles/Footer.css'
 import ContactFooter from '../components/home/ContactFooter'
-
 import RedesSc from './home/RedesSc'
 
 
@@ -24,7 +23,10 @@ export default function Footer() {
         <section className='contacto'>
           <ContactFooter />
         </section>
+        <section className='redesSociales'>
         <RedesSc/>
+        </section>
+        
       </div>
      
     </div>

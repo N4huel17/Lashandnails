@@ -13,7 +13,7 @@ function App() {
     <div className="app-container">
       <Header />
       <Body />
-      <Footer />
+      <Footer/>
     </div>
   );
 }
