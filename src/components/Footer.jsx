@@ -17,6 +17,7 @@ export default function Footer() {
             <li><a href="">Esculpidas en gel</a></li>
             <li><a href="">Esculp en acrílico</a></li>
             <li><a href="">Capping acrílico</a></li>
+            <li><a href="">Servis</a></li>
             <li><a href="">cursos</a></li>
           </ul>
         </section>

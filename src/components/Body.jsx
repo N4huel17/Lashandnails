@@ -19,7 +19,7 @@ export default function Body() {
         <div className="container">
 
 
-          <h2>Servicios</h2>
+          <h2  style={{  marginLeft: '120px', marginTop:'20px' }} >Servicios</h2>
 
           <div className="cartelitos">
 

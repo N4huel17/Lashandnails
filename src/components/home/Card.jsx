@@ -11,7 +11,7 @@ export default function Card({name= "name defecto", price= "name defecto",descri
     <div className="overlay">
       <div className="info">
       <p className="price"> Desde : $ {price}</p>
-      <p className="description">{description}</p>
+      <p style={{ marginLeft: '0px', fontSize: '10px'  }}  className="description">{description}</p>
       </div>
      
       <button className="oculto">+ ver más</button>

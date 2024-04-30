@@ -1,0 +1,4 @@
+1) instalar npm install react-router-dom
+2)crear archivo router.js
+3)importar createBrowserRouter
+4)exportar función de enrutamiento

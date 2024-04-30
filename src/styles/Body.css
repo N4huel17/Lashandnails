@@ -66,8 +66,9 @@
   .info{
     position: absolute;
     top:40%;
-    left: 40%;
+    left: 20%;
   }
+  
   .card:hover .overlay {
     opacity: 1;
   }
