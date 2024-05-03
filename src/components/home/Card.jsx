@@ -1,10 +1,11 @@
 
-export default function Card({name= "name defecto", price= "name defecto",description= "name defecto", mainImage= "1.jpg"}) {
+export default function Card({id='1',name= "name defecto", price= "name defecto",description= "name defecto", mainImage= "1.jpg"}) {
 
   return (
 
     <div className="card">
-    <h3>{name}</h3>
+      <a href={`/detalle/${id}`}>
+      <h3>{name}</h3>
     <div className="image-container">
       <img src={mainImage} alt="" />
     </div>
@@ -14,9 +15,11 @@ export default function Card({name= "name defecto", price= "name defecto",descri
       <p style={{ marginLeft: '0px', fontSize: '10px'  }}  className="description">{description}</p>
       </div>
      
-      <button className="oculto">+ ver más</button>
+      <a href={`/detalle/${id}`}><button className="oculto">+ ver más</button></a>
     </div>
-    <button className="button">+ ver más</button>
+    <a href={`/detalle/${id}`}><button className="button">+ ver más</button></a>
+      </a>
+   
   </div>
 
   )

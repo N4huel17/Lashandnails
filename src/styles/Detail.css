@@ -1,0 +1,79 @@
+.card-container {
+    width: 100%;
+    max-width: 325px; 
+    margin: 0 auto; 
+    padding: 0;
+    box-shadow: none; 
+    border: none;
+    border-radius: 7px;
+    text-align: center;
+    background-color: #ffd9f4;
+    transition: transform 0.3s, box-shadow 0.3s; /* Transición para el efecto de zoom y sombra */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+
+  }
+  .card-container:hover {
+    transform: scale(1.05); /* Hace un ligero zoom cuando se pasa el mouse */
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.2); /* Aumenta la sombra cuando se pasa el mouse */
+  }
+  .img-detail {
+    width: 100%;
+    height: auto;
+    margin: 0;
+    padding: 0;
+    border-radius: 7px  7px 0 0 ; 
+  }
+  
+  .detail-name {
+    font-size: 18px;
+    margin-bottom: 10px;
+    margin-top: 15px;
+    margin-left: -115px;
+    
+ 
+  }
+ 
+  
+  .price-detail {
+    font-size: 10px;
+    margin-bottom: 5px;
+    margin-left: -220px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .price-detail:hover {
+    transform: scale(1.05); /* Hace un ligero zoom cuando se pasa el mouse */
+   
+  }
+  .detail-description {
+    font-size: 12px;
+    margin-bottom: 5px;
+    margin-left: 18px;
+    margin-right: 10px;
+    text-align: justify; 
+    transition: transform 0.3s, box-shadow 0.3s;
+  }
+  .detail-description:hover {
+    transform: scale(1.05); /* Hace un ligero zoom cuando se pasa el mouse */
+   
+  }
+  .time-description {
+    font-size: 10px;
+    color: #46434c; 
+    border: 0px ; 
+    background-color: #c9c9c9; 
+    border-radius: 3px;
+    padding: 0px; 
+    width: 50%; 
+    margin: 0 auto; 
+    box-sizing: border-box; 
+    margin-left: 15px;
+    margin-top: 15px;
+    margin-bottom: -10px;
+    transition: transform 0.3s, box-shadow 0.3s;
+  
+ 
+  }
+  .time-description:hover {
+    transform: scale(1.03); 
+   
+  }

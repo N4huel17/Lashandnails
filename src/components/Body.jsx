@@ -6,7 +6,7 @@ import Services from './data/Services'
 
 export default function Body() {
   const servicesList = Services.map(s => {
-    return  <Card key={s.id} name= {s.name}  price= {s.price} description= {s.description} mainImage={s.mainImage} />
+    return  <Card key={s.id} id={s.id} name= {s.name}  price= {s.price} description= {s.description} mainImage={s.mainImage} />
   })
   return (
     <div>
