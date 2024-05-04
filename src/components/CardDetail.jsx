@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faClock, faClockFour, faMagnifyingGlass, faTimes, faUserTimes } from "@fortawesome/free-solid-svg-icons";
+import {  faClockFour  } from "@fortawesome/free-solid-svg-icons";
 
 export default function CardDetail({ s }) {
 

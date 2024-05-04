@@ -8,7 +8,7 @@ function Header() {
         <header className="cont-header">
             <div className="container">
                 <div className="logo-header">
-                    <p className="logo">LashandNails</p>
+               <a style={{ textDecoration: 'none' }}    href="/"><p  className="logo">LashandNails</p></a>     
                 </div>
                 <div className="menu">
                     <FontAwesomeIcon icon={faBars} className="menu-icon" />

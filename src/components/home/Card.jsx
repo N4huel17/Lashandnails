@@ -5,7 +5,7 @@ export default function Card({id='1',name= "name defecto", price= "name defecto"
 
     <div className="card">
       <a href={`/detalle/${id}`}>
-      <h3>{name}</h3>
+      <h3 className="name" >{name}</h3>
     <div className="image-container">
       <img src={mainImage} alt="" />
     </div>

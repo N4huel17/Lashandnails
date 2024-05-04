@@ -1,0 +1,176 @@
+.card-cont{
+  background-color: #f0f2f2;
+  display: flex;
+  padding: 50px;
+  margin-top: 100px;
+}
+.card-rp {
+  display: flex;
+  flex-wrap: wrap;
+justify-content: center;
+  position: relative;
+  overflow: hidden;
+  transition: transform 0.3s ease; /* Transición suave para la transformación */
+overflow: hidden;
+border-radius: 5px; /* Borde redondeado */
+box-shadow: 0 0 10px rgba(0, 0, 0, 0.3); /* Sombra en el borde */
+width: 180px;
+height: 180px;
+margin-left: 170px;
+}
+.card-rp:hover {
+  transform: scale(1.05); /* Agrandar el cartelito al pasar el mouse */
+}
+.image-container-rp {
+  position: relative;
+  width: 200px;
+  height: 200px; 
+  overflow: hidden;
+}
+
+.image-container-rp img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.overlay-rp {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5); /* Fondo negro semi-transparente */
+  opacity: 0;
+  transition: opacity 0.3s ease;
+}
+
+.info-rp{
+  position: absolute;
+  top:40%;
+  left: 20%;
+}
+
+.card-rp:hover .overlay-rp {
+  opacity: 1;
+}
+
+.overlay-rp p {
+  color: white;
+}
+
+.overlay-rp button {
+  position: absolute;
+  top: 75%;
+  left: 35%;
+  width: 90px;
+  height: 30px ;
+  border-radius: 5px;
+  background-color: rgb(0, 0, 0);
+  color: rgb(255, 255, 255);
+  border: none;
+  cursor: pointer;
+  margin-top: 10px;
+  cursor: pointer;
+ 
+}
+
+
+
+
+.card-rp h3 {
+  position: absolute;
+  top: 20%;
+  left: 50%;
+  font-size: 20px;
+  transform: translate(-50%, -50%);
+  color: white;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+}
+.titulo{
+  position: absolute;
+  bottom: -112px;
+  margin-left: 25%;
+  z-index: 1;
+}
+.name {
+  white-space: normal;
+}
+
+
+/* Estilos para pantallas pequeñas (menos de 768px de ancho) */
+@media(min-width:765px){
+  .titulo{
+    bottom: -90px;
+    display: flex;
+      justify-content:left; 
+      margin-left: 37%;
+  }
+  .card-rp {
+
+  width: 300px;
+  height: 180px;
+  margin-left: 0px;
+  }
+ 
+  .image-container-rp {
+
+    width: 300px;
+    height: 200px; 
+    overflow: hidden;
+  }
+  .info-rp{
+    display: flex;
+      justify-content:left; 
+      margin-left: 15%;
+  }
+  .name{
+    white-space: nowrap;
+     
+  }
+
+}
+@media(min-width:1024px){
+  .card-rp {
+
+    width: 410px;
+    height: 200px;
+    margin-left: 15px;
+    }
+   
+    .image-container-rp {
+  
+      width: 410px;
+      height: 220px; 
+   
+    }
+    .titulo{
+      bottom: -150px;
+      display: flex;
+       
+    }
+}
+@media(min-width:1440px){
+ 
+  .card-rp {
+  
+    width: 400px;
+    height: 200px;
+    margin-left: 90px;
+    }
+   
+    .image-container-rp {
+  
+      width: 400px;
+      height: 220px; 
+   
+    }
+    .titulo{
+      bottom: -15px;
+      display: flex;
+       
+    }
+}
+
