@@ -5,26 +5,26 @@ import Buttom from './home/Buttom'
 import RelatedProduct from './home/RelatedProduct'
 
 
-export default function Detail({s}) {
+export default function Detail({ s }) {
   return (
     <div className='detail'>
-      
-      <a  style={{ textDecoration: 'none', color: 'black',fontWeight: 'bolder',marginTop: '15px' }}  href="/">Home / {s.name}</a>
-      <br/>
-    <br />
+
+      <a style={{ textDecoration: 'none', color: 'black', fontWeight: 'bolder', marginTop: '15px' }} href="/">Home / {s.name}</a>
+      <br />
+      <br />
       <div className='card-detail'>
-      <CardDetail s={s}/>
+        <CardDetail s={s} />
 
       </div>
       <div>
-      <Buttom/>
+        <Buttom />
       </div>
 
       <div>
-       <h3 className='titulo' >OTROS SERVICIOS</h3>
-        <RelatedProduct s={s}/>
+        <h3 className='titulo' >OTROS SERVICIOS</h3>
+        <RelatedProduct s={s} />
       </div>
-      
-    </div>  
-    )
+
+    </div>
+  )
 }

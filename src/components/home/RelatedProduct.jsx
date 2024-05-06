@@ -13,44 +13,34 @@ export default function RelatedProducts({ s }) {
         slidesToShow: 1,
         slidesToScroll: 1,
         centerMode: true,
-        centerPadding: "25%", // Ajusta el espacio entre las tarjetas en el centro
-        responsive: [
-          
-        ]
-      };
+        centerPadding: "25%"
+    };
 
     return (
 
         <Slider {...settings}>
             {Services.map(s => (
-               
-
-               
                 <div className="card-cont" >
-                    
-               <div className="card-rp" key={s.id}>
-                    <a href={`/detalle/${s.id}`}>
-                        <h3 className='name'>{s.name}</h3>
-                        <div className="image-container-rp">
-                            <img src={s.mainImage} alt="" />
-                        </div>
-                        <div className="overlay-rp">
-                            <div className="info-rp">
-                                <p className="price-rp">Desde: $ {s.price}</p>
+
+                    <div className="card-rp" key={s.id}>
+                        <a href={`/detalle/${s.id}`}>
+                            <h3 className='name'>{s.name}</h3>
+                            <div className="image-container-rp">
+                                <img src={s.mainImage} alt="" />
+                            </div>
+                            <div className="overlay-rp">
+                                <div className="info-rp">
+                                    <p className="price-rp">Desde: $ {s.price}</p>
+                                </div>
+
+
                             </div>
 
-                            
-                        </div>
-           
-                    </a>
+                        </a>
+
+                    </div>
 
                 </div>
-
-            </div>
-
-
-
-            
             ))}
         </Slider>
     );
