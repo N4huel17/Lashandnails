@@ -1,0 +1,84 @@
+.agenda-container{
+    border: 1px solid rgb(196, 195, 195);
+    background-color: #ffffff;
+    border-radius: 5px;
+    
+   
+}
+.semanas{
+    background-color:#f7f5f5;
+    border-bottom: 1px solid #878689;
+    text-align:start;
+}
+.semanas .flecha {
+    background: none;
+    border: none;
+    cursor: pointer;
+    
+    font-size: 20px;
+    padding: 5px;
+  }
+  .flecha:hover {
+    width: 20px;
+    height: 50%;
+    background-color: #00a0ee; /* Cambia el color de fondo al pasar el mouse por encima */
+  }
+ 
+.dia-num{
+    
+    width: 100px;
+    display: flex;
+    flex-direction: column;
+    margin-left: 20px;
+}
+  .cont-horarios {
+    display: flex;
+    position: relative;
+    text-align:start;
+    margin-top: 50px;
+    margin-bottom: 20px;
+    font-size: 12px;
+    
+  }
+  
+  .numero-dia {
+  margin-left: 20px;
+    
+  }
+  
+
+  .ul-horario {
+    list-style: none;
+    padding: 0;
+    text-align: left;
+    border-bottom: 1px solid #c2c0c0;
+    margin-left: 10px;
+   
+  }
+  
+  .hora {
+    margin-left: 0px; /* Espacio entre el nombre del día y los horarios */
+    padding: 0 0 5px; 
+    width: 200px;
+    margin-bottom: 5px;
+    border-radius: 7px;
+    background-color: #00a0ee;
+    position: relative; /* Para posicionar el pseudoelemento */
+}
+
+.hora::before {
+    
+  content: ''; /* Contenido vacío necesario para los pseudoelementos */
+  position: absolute; /* Posiciona el pseudoelemento */
+  top: 0; /* Ajusta la posición vertical */
+  left: -20px; /* Mueve la línea hacia la izquierda para que esté separada */
+  width: 3px; /* Ancho de la línea */
+  height: 100%; /* Altura de la línea, igual a la altura del contenedor */
+  background-color: #182e73; /* Color de la línea */
+}
+
+  .div-ul {
+    display: flex;
+    flex-direction: column;
+    justify-content: center; /* Centra verticalmente los elementos dentro del contenedor */
+  }

@@ -2,6 +2,8 @@ import '../styles/Body.css'
 import portada from '../styles/img/portada.jpg';
 import Card from './home/Card';
 import Services from './data/Services'
+import ReservationForm from './ReservationForm';
+
 
 
 export default function Body() {
@@ -27,7 +29,6 @@ export default function Body() {
       {servicesList}
 
           </div>
-
         </div>
 
       </section>

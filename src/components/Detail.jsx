@@ -6,6 +6,7 @@ import RelatedProduct from './home/RelatedProduct'
 
 
 export default function Detail({ s }) {
+
   return (
     <div className='detail'>
 
