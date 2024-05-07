@@ -2,7 +2,7 @@ import React, { useState } from 'react';
 import 'react-bootstrap';
 import '../styles/Diary.css';
 import { Button, Modal, Form } from 'react-bootstrap';
-import Users from '../components/data/User'; // Asegúrate de importar correctamente Users y tener acceso a él en este componente
+import User from '../components/data/User'; // Asegúrate de importar correctamente User y tener acceso a él en este componente
 import disponibilidadHorarios from './data/Data'; // Importa disponibilidadHorarios
 
 const ReservationForm = ({ s }) => {
@@ -56,24 +56,27 @@ const ReservationForm = ({ s }) => {
   
     // Agrega más console.log para verificar otros datos
     
-    // Agregar el turno al array Users
+    // Clona el array User para evitar mutaciones directas
+    const newUserArray = [...User];
+    
+    // Agregar el turno al array clonado
     console.log('Guardando turno...');
-    Users.push({
-      id: (Users.length + 1).toString(),
+    newUserArray.push({
+      id: (newUserArray.length + 1).toString(),
       name: `${nombre} ${apellido}`,
       email,
       phone,
       instagram,
-      service: s.nombre,
+      service: s.name,
       data: `${diaSeleccionado} ${horarioSeleccionado}`,
       fechaHoraAgendado: diaActual.toLocaleString() // Usar diaActual para la fecha y hora del turno
     });
-    console.log('Turno guardado:', Users); // Verifica si los datos se agregaron correctamente
+    console.log('Turno guardado:', newUserArray); // Verifica si los datos se agregaron correctamente
   
     // Cerrar el modal después de guardar los datos
+    console.log(User);;
     setShowModal(false);
   };
-
   return (
     <div className="container">
       <div className="row">
