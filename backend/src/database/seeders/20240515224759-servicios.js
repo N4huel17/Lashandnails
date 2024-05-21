@@ -1,34 +1,34 @@
 'use strict';
-const path = require('path');
 
+const serviceJSON=require('../../data/Services.json')
+const servicesDB= serviceJSON.map((services,index) => {
+  return {
+    name:services.name,
+    description:services.description,
+    price:services.price,
+    time:services.time,
+    main_image:services.mainImage,
+    createdAt: new Date(),
+    updatedAt: new Date(),
+  }
+})
+ 
+
+/** @type {import('sequelize-cli').Migration} */
 module.exports = {
-  up: async (queryInterface, Sequelize) => {
-    // Insertar el servicio
-    const service = await queryInterface.bulkInsert('Services', [{
-      name: 'CAPPING POLIGEL',
-      description: 'Un servicio de capping poligel de alta calidad',
-      price: 2000.00,
-      time: '40 minutos aproximadamente',
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }]);
+  async up(queryInterface, Sequelize) {
 
-    // Insertar la imagen asociada al servicio
-    const imagePath = 'poligel.png';
-    const absoluteImagePath = path.join(__dirname, '../../public/img', imagePath);
 
-    await queryInterface.bulkInsert('ServiceImages', [{
-      serviceId: service.id,
-      image_path: absoluteImagePath,
-      createdAt: new Date(),
-      updatedAt: new Date()
-    }]);
+    await queryInterface.bulkInsert(
+      'Services',
+      servicesDB,
+      {});
 
-    return service;
   },
 
-  down: async (queryInterface, Sequelize) => {
+  async down(queryInterface, Sequelize) {
+
     await queryInterface.bulkDelete('Services', null, {});
-    await queryInterface.bulkDelete('ServiceImages', null, {});
+
   }
 };

@@ -19,7 +19,9 @@ module.exports = (sequelize, DataTypes) => {
     name: DataTypes.STRING,
     description: DataTypes.TEXT,
     price: DataTypes.FLOAT,
-    time: DataTypes.STRING
+    time: DataTypes.STRING,
+    main_Image: DataTypes.STRING,
+   
     // main_image: DataTypes.STRING // Este campo puede ser eliminado si las imágenes se manejan a través de ServiceImage
   }, {
     sequelize,

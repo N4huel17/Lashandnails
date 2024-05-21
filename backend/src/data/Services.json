@@ -1,0 +1,10 @@
+[
+    {
+        "id":1,
+        "name": "CAPPING POLIGEL",
+        "description": "Esta técnica combina la durabilidad del gel con la ligereza del acrílico, proporcionando un acabado fuerte y natural que dura semanas",
+        "price": 3100,
+        "time": 40 ,
+        "mainImage":"poligel2.jpg"
+    }
+]
