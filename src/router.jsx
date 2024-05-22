@@ -4,6 +4,10 @@ import Body from "./components/Body";
 import Services from "./components/data/Services";
 import Detail from "./components/Detail";
 import Diary from "./components/home/Diary";
+import Loginn from "./components/admin/view/Loginn";
+import Dashboard from "./components/admin/view/Dashboard";
+import Admin from "./components/admin/view/Admin";
+
 
 
 const routes = [
@@ -19,6 +23,14 @@ const routes = [
 
         ]
     },
+   {
+    path:"/admin",
+    element: <Admin/>
+   },
+   {
+    path:"/admin/dashboard",
+    element: <Dashboard/>
+   }
 
 ];
 Services.forEach((s) => {

@@ -82,6 +82,7 @@ import curso from '../../styles/img/esculpidas-acri3.jpg';
         time: '40 minutos aproximadamente',
         mainImage: ada, 
     },
+    
 
   
 ]

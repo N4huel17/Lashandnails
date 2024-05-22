@@ -1,0 +1,50 @@
+/* admin.css */
+body, html {
+  height: 100%;
+  margin: 0;
+}
+
+#wrapper {
+  display: flex;
+  width: 100%;
+  height: 100%;
+  background-color: #f8f9fa; /* Fondo gris claro para la página */
+}
+
+#sidebar {
+  background-color: #ffffff; /* Fondo blanco para el sidebar */
+  color: black;
+  box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1); /* Sombra para destacar el sidebar */
+}
+
+#content-wrapper {
+
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  background-color: #dcd3de; /* Fondo gris claro para el contenido */
+}
+
+#content {
+  flex: 1;
+  padding: 0px;
+}
+
+.sidebar-text {
+  margin-left: 10px;
+  font-weight: bolder;
+}
+
+.sidebar-text:hover {
+  color: #f1739b;
+}
+
+.nav-item {
+  margin-top: 15px;
+  margin-bottom: 15px;
+}
+.login-form{
+  
+  margin-top: 10%;
+  margin-left: 30%;
+}
