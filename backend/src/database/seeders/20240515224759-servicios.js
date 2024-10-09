@@ -1,7 +1,6 @@
-'use strict';
 
 const serviceJSON=require('../../data/Services.json')
-const servicesDB= serviceJSON.map((services,index) => {
+const servicesDB= serviceJSON.map((services) => {
   return {
     name:services.name,
     description:services.description,
@@ -15,8 +14,8 @@ const servicesDB= serviceJSON.map((services,index) => {
  
 
 /** @type {import('sequelize-cli').Migration} */
-module.exports = {
-  async up(queryInterface, Sequelize) {
+module.exports =  {
+  async up(queryInterface) {
 
 
     await queryInterface.bulkInsert(
@@ -26,7 +25,7 @@ module.exports = {
 
   },
 
-  async down(queryInterface, Sequelize) {
+  async down(queryInterface) {
 
     await queryInterface.bulkDelete('Services', null, {});
 

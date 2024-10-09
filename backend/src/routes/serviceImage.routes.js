@@ -1,5 +1,5 @@
-const express = require('express');
-const { getServiceImages, getServiceImageById, createServiceImage, updateServiceImage, deleteServiceImage } = require('../controllers/serviceImageController');
+import express from 'express';
+import { getServiceImages, getServiceImageById, createServiceImage, updateServiceImage, deleteServiceImage } from '../controllers/serviceImageController.js';
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.post('/', createServiceImage);
 router.put('/:id', updateServiceImage);
 router.delete('/:id', deleteServiceImage);
 
-module.exports = router;
+export default router;

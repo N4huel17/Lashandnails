@@ -1,5 +1,5 @@
-const express = require('express');
-const { getAvailabilities, getAvailabilityById, createAvailability, updateAvailability, deleteAvailability } = require('../controllers/availabilityController');
+import express from 'express';
+import { getAvailabilities, getAvailabilityById, createAvailability, updateAvailability, deleteAvailability } from '../controllers/availabilityController.js';
 
 const router = express.Router();
 
@@ -9,4 +9,4 @@ router.post('/', createAvailability);
 router.put('/:id', updateAvailability);
 router.delete('/:id', deleteAvailability);
 
-module.exports = router;
+export default router;

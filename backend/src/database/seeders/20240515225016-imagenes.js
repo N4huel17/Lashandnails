@@ -32,11 +32,11 @@ var main_image= [
   updatedAt: new Date()
 },
 ]
-module.exports = {
-  up: async (queryInterface, Sequelize) => {
+module.exports =  {
+  up: async (queryInterface) => {
     await queryInterface.bulkInsert('ServiceImages', main_image, {});
   },
-  down: async (queryInterface, Sequelize) => {
+  down: async (queryInterface) => {
     await queryInterface.bulkDelete('ServiceImages', null, {});
   }
 };

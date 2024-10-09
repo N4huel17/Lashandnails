@@ -1,30 +1,24 @@
-require('dotenv').config()
-const express = require('express');
+import 'dotenv/config';
+import express from 'express';
+import path from 'path';
+import bodyParser from 'body-parser';
+import cors from 'cors';
+import { sequelize } from './src/database/models'; // Ajusta la ruta a donde tienes tus modelos
+import userRoutes from './src/routes/User.routes';
+import serviceRoutes from './src/routes/service.routes';
+import appointmentRoutes from './src/routes/appointment.routes';
+import availabilityRoutes from './src/routes/availability.routes';
+import serviceImageRoutes from './src/routes/serviceImage.routes';
+
 const app = express();
+const port = 3000;
 
-const path = require('path');
-
-
-// app.js
 app.use('/img', express.static(path.join(__dirname, 'public/img')));
-const bodyParser = require('body-parser');
-const cors = require('cors');
-const { sequelize } = require('./src/database/models'); // Asegúrate de ajustar la ruta a donde tienes tus modelos
-
-const port =  3000;
-
 app.use(cors());
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({ extended: true }));
 
 // Rutas
-const userRoutes = require('./src/routes/User.routes');
-const serviceRoutes = require('./src/routes/service.routes');
-const appointmentRoutes = require('./src/routes/appointment.routes');
-const availabilityRoutes = require('./src/routes/availability.routes');
-const serviceImageRoutes = require('./src/routes/serviceImage.routes');
-
-
 app.use('/api/users', userRoutes);
 app.use('/api/services', serviceRoutes);
 app.use('/api/appointments', appointmentRoutes);

@@ -1,29 +1,27 @@
 // controllers/appointmentController.js
-const { Appointment } = require('../database/models');
+import { Appointment } from '../database/models.js';
 
-const getAppointments = async (req, res) => {
+export const getAppointments = async (req, res) => {
   const appointments = await Appointment.findAll();
   res.json(appointments);
 };
 
-const getAppointmentById = async (req, res) => {
+export const getAppointmentById = async (req, res) => {
   const appointment = await Appointment.findByPk(req.params.id);
   res.json(appointment);
 };
 
-const createAppointment = async (req, res) => {
+export const createAppointment = async (req, res) => {
   const appointment = await Appointment.create(req.body);
   res.json(appointment);
 };
 
-const updateAppointment = async (req, res) => {
+export const updateAppointment = async (req, res) => {
   const appointment = await Appointment.update(req.body, { where: { id: req.params.id } });
   res.json(appointment);
 };
 
-const deleteAppointment = async (req, res) => {
+export const deleteAppointment = async (req, res) => {
   await Appointment.destroy({ where: { id: req.params.id } });
   res.json({ message: 'Appointment deleted' });
 };
-
-module.exports = { getAppointments, getAppointmentById, createAppointment, updateAppointment, deleteAppointment };
