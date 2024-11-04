@@ -11,30 +11,30 @@ module.exports = {
       },
       name: {
         type: Sequelize.STRING,
-        allowNull: false, // Aseguramos que el nombre no sea nulo
+        allowNull: false, 
       },
       email: {
         type: Sequelize.STRING,
-        allowNull: false, // Aseguramos que el email no sea nulo
-        unique: true, // Aseguramos que el email sea único
+        allowNull: false, 
+        unique: true, 
       },
       phone: {
         type: Sequelize.STRING,
-        allowNull: true, // Puedes permitir que el número de teléfono sea nulo
+        allowNull: true, 
       },
       instagram: {
         type: Sequelize.STRING,
-        allowNull: true, // Puedes permitir que el campo sea nulo
+        allowNull: true, 
       },
       createdAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'), // Valor por defecto
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP'), 
       },
       updatedAt: {
         allowNull: false,
         type: Sequelize.DATE,
-        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'), // Actualización automática del timestamp
+        defaultValue: Sequelize.literal('CURRENT_TIMESTAMP ON UPDATE CURRENT_TIMESTAMP'), 
       }
     });
   },

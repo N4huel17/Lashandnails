@@ -1,6 +1,6 @@
 const dotenv = require('dotenv');
 
-// Carga las variables de entorno
+
 dotenv.config();
 
 module.exports = {

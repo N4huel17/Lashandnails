@@ -1,5 +1,5 @@
 'use strict';
-import { Model } from 'sequelize';
+const { Model } = require('sequelize');
 
 module.exports =  (sequelize, DataTypes) => {
   class Service extends Model {
@@ -22,7 +22,7 @@ module.exports =  (sequelize, DataTypes) => {
       price: DataTypes.FLOAT,
       time: DataTypes.STRING,
       main_Image: DataTypes.STRING,
-      // main_image: DataTypes.STRING // Este campo puede ser eliminado si las imágenes se manejan a través de ServiceImage
+     
     },
     {
       sequelize,

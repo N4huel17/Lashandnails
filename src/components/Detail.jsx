@@ -1,4 +1,5 @@
-import React from 'react'
+/* eslint-disable react/prop-types */
+
 import CardDetail from './CardDetail'
 import '../styles/Detail.css'
 import Buttom from './home/Buttom'
@@ -18,7 +19,7 @@ export default function Detail({ s }) {
 
       </div>
       <div>
-        <Buttom />
+        <Buttom  s={s} />
       </div>
 
       <div>

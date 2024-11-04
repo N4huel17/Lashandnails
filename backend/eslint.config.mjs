@@ -1,13 +1,14 @@
-import globals from "globals";
-import pluginJs from "@eslint/js";
-import pluginReact from "eslint-plugin-react";
+// .eslintrc.js
+const globals = require('globals');
+const pluginJs = require('@eslint/js');
+const pluginReact = require('eslint-plugin-react');
 
-export default [
+module.exports = [
   { 
-    files: ["**/*.{js,mjs,cjs,jsx}"], 
+    files: ['**/*.{js,mjs,cjs,jsx}'], 
     languageOptions: { 
       globals: {
-        ...globals.node,  // Agrega las variables globales de Node.js, incluyendo `process`
+        ...globals.node,  
       },
     },
   },

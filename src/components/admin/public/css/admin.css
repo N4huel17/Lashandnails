@@ -1,13 +1,12 @@
 /* admin.css */
-body, html {
-  height: 100%;
-  margin: 0;
-}
+
+/* Estilos para móviles (mobile-first) */
 
 #wrapper {
   display: flex;
+  flex-direction: column; /* Cambia a columna por defecto para móviles */
   width: 100%;
-  height: 100%;
+  height: auto;
   background-color: #f8f9fa; /* Fondo gris claro para la página */
 }
 
@@ -18,7 +17,6 @@ body, html {
 }
 
 #content-wrapper {
-
   flex: 1;
   display: flex;
   flex-direction: column;
@@ -43,8 +41,114 @@ body, html {
   margin-top: 15px;
   margin-bottom: 15px;
 }
-.login-form{
-  
+
+.login-form {
   margin-top: 10%;
   margin-left: 30%;
+}
+
+.ava-cont {
+  margin-left: 5px;
+}
+
+.container {
+  max-width: 1200px; /* Ajusta el ancho máximo según tus necesidades */
+  margin: 0 auto; 
+  margin-top: 50px; /* Centra el contenido horizontalmente */
+}
+
+.container-half {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.availability-container,
+.services-container {
+  flex-basis: calc(100% - 10px); /* Cambia el ancho a 100% para móviles */
+  margin-right: 0; /* Elimina el margen derecho */
+  margin-bottom: 20px; /* Agrega un espacio inferior entre los contenedores */
+}
+
+.services-container {
+  width: 100%;
+  height: auto; /* Cambia a auto para adaptarse al contenido */
+  background-color: #ffffff;
+  border-radius: 5px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2); /* Sombra gris para el contenedor */
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Transiciones suaves */
+}
+
+/* Efecto al pasar el mouse */
+.services-container:hover {
+  transform: scale(1.02); /* Aumentar ligeramente el tamaño */
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3); /* Aumentar la sombra */
+}
+
+.services-header {
+  padding: 10px 0; /* Añade relleno arriba y abajo al encabezado */
+  border-bottom: 1px solid #ccc; /* Agrega una línea divisoria en la parte inferior del encabezado */
+}
+
+.services-grid {
+  margin: 2px;
+  display: grid;
+  grid-template-columns: repeat(1, 1fr); /* Cambia a 1 columna en dispositivos móviles */
+  gap: 15px; /* Agrega espacio entre las tarjetas de servicio */
+}
+
+.servi-card {
+  text-align: center;
+  font-size: 15px;
+  color: #f8f9fa;
+  border-radius: 5px;
+  background-color: #000000;
+  height: 80px; /* Altura fija para todas las tarjetas */
+  width: 90%; /* Ancho del 90% del contenedor */
+  margin: 5px; /* Ajusta el margen entre las tarjetas */
+  display: flex; /* Cambia a flexbox para centrar el contenido */
+  align-items: center; /* Centra verticalmente el contenido */
+  justify-content: center; /* Centra horizontalmente el contenido */
+
+}
+
+
+
+/* Estilos para tabletas */
+@media only screen and (max-width: 768px) {
+  /* Cambia la dirección del flexbox a columna para tabletas */
+  #wrapper {
+    flex-direction: column; 
+  }
+
+  .container-half {
+    flex-direction: column; /* Cambia la dirección del flexbox a columna */
+  }
+
+  .availability-container,
+  .services-container {
+    flex-basis: 100%; /* Cambia el ancho a 100% para ocupar todo el ancho */
+    margin-right: 0; /* Elimina el margen derecho */
+    margin-bottom: 20px; /* Agrega un espacio inferior entre los contenedores */
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(2, 1fr); /* Cambia a 2 columnas en dispositivos más pequeños */
+  }
+}
+
+/* Estilos para PC */
+@media only screen and (min-width: 1024px) {
+  #wrapper {
+    flex-direction: row; /* Cambia la dirección del flexbox a fila para pantallas más grandes */
+  }
+
+  .availability-container,
+  .services-container {
+    flex-basis: calc(40% - 10px); /* Cada contenedor ocupa el 40% del espacio disponible */
+    margin-right: 20px;
+  }
+
+  .services-grid {
+    grid-template-columns: repeat(3, 1fr); /* Genera 3 columnas de igual tamaño */
+  }
 }

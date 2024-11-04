@@ -1,5 +1,6 @@
-import React, { useState } from 'react';
+
 import 'bootstrap/dist/css/bootstrap.min.css';
+import { useState } from 'react';
 
 function Loginn() {
     const [email, setEmail] = useState('');

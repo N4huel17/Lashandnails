@@ -1,4 +1,4 @@
-import React from 'react';
+
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import { faBars, faAddressCard, faMagnifyingGlass } from '@fortawesome/free-solid-svg-icons';
 import '../styles/Header.css';

@@ -1,4 +1,4 @@
-import React from 'react';
+
 import logo from '../public/img/logo.jpg';
 import '../public/css/admin.css'; // Asegúrate de que la ruta del archivo CSS sea correcta
 

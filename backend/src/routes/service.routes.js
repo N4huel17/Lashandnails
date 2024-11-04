@@ -1,5 +1,12 @@
-import express from 'express';
-import { getServices, getServiceById, createService, updateService, deleteService } from '../controllers/serviceController.js';
+
+const express = require('express');
+const {
+  getServices,
+  getServiceById,
+  createService,
+  updateService,
+  deleteService
+} = require('../controllers/serviceController');
 
 const router = express.Router();
 
@@ -9,4 +16,4 @@ router.post('/', createService);
 router.put('/:id', updateService);
 router.delete('/:id', deleteService);
 
-export default router;
+module.exports = router;

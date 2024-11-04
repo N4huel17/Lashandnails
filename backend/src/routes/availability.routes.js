@@ -1,5 +1,12 @@
-import express from 'express';
-import { getAvailabilities, getAvailabilityById, createAvailability, updateAvailability, deleteAvailability } from '../controllers/availabilityController.js';
+
+const express = require('express');
+const {
+  getAvailabilities,
+  getAvailabilityById,
+  createAvailability,
+  updateAvailability,
+  deleteAvailability
+} = require('../controllers/availabilityController');
 
 const router = express.Router();
 
@@ -9,4 +16,4 @@ router.post('/', createAvailability);
 router.put('/:id', updateAvailability);
 router.delete('/:id', deleteAvailability);
 
-export default router;
+module.exports = router;

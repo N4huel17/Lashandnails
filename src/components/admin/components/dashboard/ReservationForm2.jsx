@@ -1,56 +1,47 @@
 import React, { useState } from 'react';
-import DatePicker from 'react-datepicker';
+
 import 'react-datepicker/dist/react-datepicker.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 import '../../public/css/Diary2.css'
+import { Container,  Table } from 'react-bootstrap';
+
 
 export default function ReservationForm2() {
-  const [selectedDate, setSelectedDate] = useState(null);
+  const [reservations, setReservations] = useState([
+    { day: 'Lunes 5 de mayo', time: '10:00' },
+    { day: 'Martes 6 de mayo', time: '11:00' },
+    { day: 'Miércoles 7 de mayo', time: '12:00' },
+    { day: 'Jueves 8 de mayo', time: '13:00' },
+    { day: 'Viernes 9 de mayo', time: '14:00' },
+  ]);
 
-  const availableDates = [
-    new Date('2024-05-22T10:00:00'),
-    new Date('2024-05-23T14:00:00'),
-    new Date('2024-05-24T16:00:00'),
-  ];
 
-  const isAvailable = (date) => {
-    return availableDates.some(
-      availableDate => 
-        date.getFullYear() === availableDate.getFullYear() &&
-        date.getMonth() === availableDate.getMonth() &&
-        date.getDate() === availableDate.getDate() &&
-        date.getHours() === availableDate.getHours() &&
-        date.getMinutes() === availableDate.getMinutes()
-    );
-  };
 
   return (
-    <div className="calendar-container">
-      <div className="card">
-        <div className="card-body">
-          <h5 className="card-title">Seleccione una fecha y hora</h5>
-          <DatePicker
-            selected={selectedDate}
-            onChange={date => setSelectedDate(date)}
-            showTimeSelect
-            timeFormat="HH:mm"
-            timeIntervals={30}
-            timeCaption="Hora"
-            dateFormat="MMMM d, yyyy h:mm aa"
-            inline
-            highlightDates={availableDates}
-            filterDate={isAvailable}
-            filterTime={isAvailable}
-            className="custom-calendar"
-          />
-          {selectedDate && (
-            <div className="mt-3">
-              <h6>Fecha y hora seleccionadas:</h6>
-              <p>{selectedDate.toLocaleString()}</p>
-            </div>
-          )}
-        </div>
+    <Container>
+     
+
+      
+      <div style={{ maxHeight: '200px', overflowY: 'auto' }}>
+        <Table striped bordered hover>
+          <thead>
+            <tr>
+              <th>Día</th>
+              <th>Horario</th>
+            </tr>
+          </thead>
+          <tbody>
+            {reservations.map((reservation, index) => (
+              <tr key={index}>
+                <td>{reservation.day}</td>
+                <td>{reservation.time}</td>
+              </tr>
+            ))}
+          </tbody>
+        </Table>
       </div>
-    </div>
+    </Container>
   );
-}
+};
+ 
+

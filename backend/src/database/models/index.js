@@ -1,11 +1,13 @@
 'use strict';
 
-import fs from 'fs';
-import path from 'path';
-import { Sequelize } from 'sequelize';
+const fs = require('fs'); 
+const path = require('path'); 
+const { Sequelize } = require('sequelize'); 
+
 const basename = path.basename(__filename);
 const env = process.env.NODE_ENV || 'development';
-import config from '../config/config.js'; // Asegúrate de que este archivo esté exportando correctamente.
+const config = require('../config/config.js'); 
+
 const db = {};
 
 let sequelize;
@@ -34,4 +36,4 @@ Object.keys(db).forEach(modelName => {
 db.sequelize = sequelize;
 db.Sequelize = Sequelize;
 
-export default db; // Cambiado a export default
+module.exports = db; 

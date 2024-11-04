@@ -1,5 +1,5 @@
-// controllers/serviceController.js
-const { Service, ServiceImage } = require('../database/models');
+
+const { Service, ServiceImage } = require('../database/models/index');
 
 const getServices = async (req, res) => {
   try {
