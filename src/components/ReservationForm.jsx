@@ -1,9 +1,9 @@
-import React, { useState } from 'react';
 import 'react-bootstrap';
 import '../styles/Diary.css';
 import { Button, Modal, Form } from 'react-bootstrap';
 import User from '../components/data/User'; // Asegúrate de importar correctamente User y tener acceso a él en este componente
 import disponibilidadHorarios from './data/Data'; // Importa disponibilidadHorarios
+import { useState } from 'react';
 
 const ReservationForm = ({ s }) => {
   const [fechaActual, setFechaActual] = useState(new Date());
@@ -77,6 +77,7 @@ const ReservationForm = ({ s }) => {
     console.log(User);;
     setShowModal(false);
   };
+
   return (
     <div className="container">
       <div className="row">
@@ -90,7 +91,16 @@ const ReservationForm = ({ s }) => {
             <div className="agenda">
               {diasSemana.map((dia, index) => {
                 const diaActual = new Date(fechaActual);
-                diaActual.setDate(diaActual.getDate() + index - fechaActual.getDay());
+
+                // Obtiene el día de la semana (0 es domingo, 1 es lunes, etc.)
+                const dayOfWeek = diaActual.getDay();
+
+                // Calcula la diferencia para retroceder o avanzar al lunes
+                const diffToMonday = (dayOfWeek === 0 ? -6 : 1) - dayOfWeek;
+
+                // Ajusta la fecha actual al lunes de la semana actual y suma el índice para cada día
+                diaActual.setDate(diaActual.getDate() + diffToMonday + index);
+
                 return (
                   <div className='cont-horarios' key={index}>
                     <div className='dia-num'>

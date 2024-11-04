@@ -1,0 +1,14 @@
+.custom-calendar-container {
+  max-width: 600px; /* Ajusta el ancho máximo del calendario */
+  margin: auto;
+  
+}
+
+.custom-calendar {
+  width: 100%;
+  height: auto;
+}
+.calendar-container{
+width: 1500px;
+height: 100%;
+}
